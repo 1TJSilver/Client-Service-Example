@@ -18,8 +18,7 @@ public class ClientMain {
             System.out.println(result);
 
         } catch (IOException ex){
-            System.out.println(ex.getMessage()
-            );
+            System.out.println(ex.getMessage());
         }
     }
 }

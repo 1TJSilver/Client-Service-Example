@@ -19,6 +19,8 @@ public class ServerMain {
                     System.out.printf("New connection, Port: %d%n", client.getPort());
                     final String name = reader.readLine();
                     writer.println(String.format("Hi %s, your port is %d", name, client.getPort()));
+                } catch (IOException ex){
+                    System.out.println(ex.getMessage());
                 }
             }
         } catch (IOException ex) {
