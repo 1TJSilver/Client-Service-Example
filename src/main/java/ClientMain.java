@@ -8,9 +8,9 @@ public class ClientMain {
     public static void main(String[] args) {
         String host = "127.0.0.1";
         int port = 8765;
-        try (Socket client = new Socket(host, port)){
-            PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+        try (Socket client = new Socket(host, port);
+             PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
+             BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()))){
 
             writer.println("Mixasik");
 
